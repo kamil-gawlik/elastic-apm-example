@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  kibana:
+    image: kibana:7.3.1
+    environment:
+      - "LOGGING_QUIET=true"
+    links:
+      - elasticsearch
+    ports:
+      - 5601:5601
+
+  elasticsearch:
+    image: apm-java/elasticsearch:1.0.0
+    build:
+      context: elasticsearch
+      dockerfile: Dockerfile
+    environment:
+      - cluster.name=apm-java
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+
+  apm:
+    image: apm-java/apm-server:1.0.0
+    build:
+      context: apm-server
+      dockerfile: Dockerfile
+    ports:
+      - 8200:8200
+    links:
+      - elasticsearch
+      - kibana
