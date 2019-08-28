@@ -42,7 +42,7 @@ to generate some traffic and refresh kibana's apm page.
  
  - APM may not be not available after firs start, try:
  ```bash
-     docker-compose -f docker-compose.yml restart apm
+     docker-compose -f infrastructure/docker-compose.yml restart apm
  ```
  
  - If your have an obscure problem with elasticsearch shards please try:
