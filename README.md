@@ -33,7 +33,7 @@ To run apps, execute in `server` and `frontend` folders:
 Server is available at:
 [link](http://localhost:8082/test)
 
-Frontend:
+Frontend is available at:
 [link](http://localhost:8081/test)
 
 Kibana should be available at [link](http://localhost:5601) with no errors
