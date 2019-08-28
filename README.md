@@ -8,7 +8,13 @@ This is short presentation of Elastic APM set up.
  - docker
  - docker-compose
 
-
+### Used tools
+ - kibana:7.3.1
+ - elasticsearch:7.3.1
+ - apm-server:7.3.1
+ - apm-agent:1.9.0
+ - springboot:2.1.7
+ 
 ### How to run
 
 To run infrastructure execute:
