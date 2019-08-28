@@ -38,6 +38,26 @@ Apm page is available at [link](http://localhost:5601/app/apm#/services?rangeFro
 Chose frontend and on the bottom of the page select transaction. If no transactions are available visit [frontend](http://localhost:8081/test) 
 to generate some traffic and refresh kibana's apm page.
 
+### Available data
+
+ If everything is up and running explore available data.
+ 
+ - Choose `frontend` as a service which stats you will explore
+ ![frontend service selection](./docs/images/apm_services.png)
+
+ - You can see stats like transaction duration and request per minute charts. Let's explore one of the transactions.
+ Choose `FrontendRestEndpoint#test` from transactions list at the bottom of the page
+ ![frontend service selection](./docs/images/apm_transactions.png)
+
+ - Have a look on transaction sample at the bottom of the page and it's content
+    - services participating in transaction (frontend and server)
+    - timeline of transaction
+    - custom scope of operation shown on timeline (longRunningMethod)
+    - duration of executed sql query (bottom line) and query itself 
+    
+ ![frontend service selection](./docs/images/apm_transaction_sample.png)
+
+
 ### Troubleshooting
  
  - APM may not be not available after firs start, try:
