@@ -1,6 +1,7 @@
 ## Purpose of this project
 
 This is short presentation of Elastic APM set up.
+This set of tools can be used to present flow of information in microservices based system, leting user find out which applications participate in communication and how long each step takes.
 
 ### Requirements
 
